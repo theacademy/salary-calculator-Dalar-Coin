@@ -60,7 +60,7 @@ public class EmployeeSalaryCalculator
 				{
 					//YOUR CODE STARTS HERE
 					basicPay = hoursWorked * hourlyRate;
-					grossSalary = basicPay + overTimePay;
+					grossSalary = basicPay;
 					//YOUR CODE ENDS HERE
 				}
 				else
