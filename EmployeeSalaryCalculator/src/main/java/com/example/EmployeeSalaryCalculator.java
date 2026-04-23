@@ -69,7 +69,8 @@ public class EmployeeSalaryCalculator
 					overTime = hoursWorked - standardWorkingHours;
 					overTimeRate = hourlyRate * 2;
 					overTimePay = overTime * overTimeRate;
-					basicPay = (hoursWorked - overTime) * hourlyRate;
+					int otHours = hoursWorked - overTime;
+					basicPay = otHours * hourlyRate;
 					grossSalary = basicPay + overTimePay;
 					//YOUR CODE ENDS HERE
 				}
