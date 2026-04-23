@@ -42,7 +42,7 @@ public class EmployeeSalaryCalculator
 	{
 		hourlyRate = HR;
 		hoursWorked = HW;
-		
+
 		/*
 		All new code must be added between the commented lines below.
 			YOUR CODE STARTS HERE
@@ -59,15 +59,18 @@ public class EmployeeSalaryCalculator
 				if(HW <= standardWorkingHours)
 				{
 					//YOUR CODE STARTS HERE
-					 
-
+					basicPay = (HW - overTime) * hourlyRate;
+					grossSalary = basicPay + overTimePay;
 					//YOUR CODE ENDS HERE
 				}
 				else
 				{
 					//YOUR CODE STARTS HERE
- 
-
+					overTime = HW - standardWorkingHours;
+					overTimeRate = hourlyRate * 2;
+					overTimePay = overTime * overTimeRate;
+					basicPay = (HW - overTime) * hourlyRate;
+					grossSalary = basicPay + overTimePay;
 					//YOUR CODE ENDS HERE
 				}
 				return grossSalary;
